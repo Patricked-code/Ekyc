@@ -4,10 +4,12 @@
   "canonical_branch": "main",
   "canonical_revision": 1,
   "work_revision": 1,
-  "observed_head_sha": "27b584ef38546138b8677690ab9e69e9e1c7c943",
-  "current_checkpoint": null,
+  "observed_head_sha": "4e4619465afb454bbd901d3d390e534f36839417",
+  "current_checkpoint": "bootstrap",
   "current_handoff": null,
   "next_action": "DISCOVER_PROJECT_BASELINE",
   "blockers": [],
-  "freshness": "INITIALIZED_PENDING_ATTESTATION"
+  "freshness": "ATTESTED",
+  "bootstrap_attestation_subject_sha": "4e4619465afb454bbd901d3d390e534f36839417",
+  "attestation_model": "CHILD_COMMIT_ATTESTS_INITIALIZATION_COMMIT"
 }

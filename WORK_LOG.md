@@ -5,6 +5,9 @@
 - Repository: `Patricked-code/Ekyc`
 - Canonical branch: `main`
 - Action: initialize governed repository
-- Result: `PENDING`
+- Result: `PASS`
 
 Ajouter ici les preuves d'exécution significatives, commandes, runs CI, anomalies et corrections.
+- Bootstrap attestation: `PASS`
+- Attested initialization commit: `4e4619465afb454bbd901d3d390e534f36839417`
+- GitHub run: `36293613260`
