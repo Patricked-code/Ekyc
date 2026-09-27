@@ -1,26 +1,11 @@
 # STATUS — État courant
 
-> State: `INITIALIZATION_REQUIRED`
+> State: `GOVERNANCE_INITIALIZED_BASELINE_REQUIRED`
 
-## Current baseline
+- Repository: `Patricked-code/Ekyc`
+- Branch: `main`
+- Bootstrap input HEAD: `27b584ef38546138b8677690ab9e69e9e1c7c943`
+- Governance validation: `PENDING_ATTESTATION`
+- Next action: `DISCOVER_PROJECT_BASELINE`
 
-- Repository: `{{REPOSITORY}}`
-- Branch: `{{CANONICAL_BRANCH}}`
-- HEAD: `TO_CAPTURE`
-- Last verified CI: `NOT_RUN`
-
-## Implemented
-
-- Governance template structure.
-
-## In progress
-
-- Project initialization.
-
-## Blockers
-
-- Project context not initialized.
-
-## External status
-
-No production, deployment, compliance, legal, financial or operational status is implied by this template.
+No production, deployment, compliance, legal, financial or operational status is implied.

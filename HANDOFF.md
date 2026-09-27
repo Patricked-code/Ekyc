@@ -1,21 +1,9 @@
 # HANDOFF — Reprise inter-agent
 
-## Current repository
+- Repository: `Patricked-code/Ekyc`
+- Branch: `main`
+- Bootstrap input HEAD: `27b584ef38546138b8677690ab9e69e9e1c7c943`
+- Current work item: `WORK-DISCOVER-001`
+- Next action: `DISCOVER_PROJECT_BASELINE`
 
-- Repository: `{{REPOSITORY}}`
-- Branch: `{{CANONICAL_BRANCH}}`
-- HEAD: `TO_CAPTURE`
-
-## Read first
-
-Follow `00_START_HERE.md`.
-
-## Current loop
-
-- `LOOP-INIT-001`
-- State: `IN_PROGRESS`
-- Next action: `INITIALIZE_PROJECT_GOVERNANCE`
-
-## Safety
-
-Do not infer missing context. Re-read the versioned authorities and verify remote state before writing.
+Before any write: reobserve the exact online HEAD. If it moved, reconcile intervening work first.

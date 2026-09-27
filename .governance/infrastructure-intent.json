@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "repository": "{{REPOSITORY}}",
+  "repository": "Patricked-code/Ekyc",
   "status": "PLANNED_NOT_PROVISIONED",
   "github_binding": {
-    "repository": "{{REPOSITORY}}",
+    "repository": "Patricked-code/Ekyc",
     "status": "KNOWN"
   },
   "deployment_target": {

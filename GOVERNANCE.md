@@ -1,13 +1,13 @@
 # GOVERNANCE — Contrat supérieur du dépôt
 
-> Dépôt : `{{REPOSITORY}}`  
-> Projet : `{{PROJECT_NAME}}`  
-> Propriétaire : `{{OWNER}}`
+> Dépôt : `Patricked-code/Ekyc`  
+> Projet : `Ekyc`  
+> Propriétaire : `@Patricked-code`
 
 ## Contrat
 
 ```text
-CANONICAL_WORK_BRANCH = {{CANONICAL_BRANCH}}
+CANONICAL_WORK_BRANCH = main
 FORCE_PUSH = FORBIDDEN
 HISTORY_REWRITE = FORBIDDEN
 IMPROVEMENT_ONLY = REQUIRED

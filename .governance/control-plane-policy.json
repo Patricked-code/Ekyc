@@ -61,7 +61,7 @@
     ".governance/control-plane-state",
     ".governance/control-plane-db"
   ],
-  "current_role": "CENTRAL_GOVERNANCE_CONTROL_PLANE",
+  "current_role": "GOVERNED_TARGET_CLIENT",
   "executor": {
     "repository_creation": "scripts/control_plane_create_repository.py",
     "authority_policy": ".governance/repository-creation-executor.json",
@@ -198,5 +198,6 @@
     ],
     "real_client_state_mutated": false,
     "subprocess_diagnostics": true
-  }
+  },
+  "client_repository": "Patricked-code/Ekyc"
 }

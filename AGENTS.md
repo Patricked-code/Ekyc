@@ -1,6 +1,6 @@
 # AGENTS — Règles pour tout agent, humain ou automatisation
 
-Ce fichier s'applique à toute intervention sur `{{REPOSITORY}}`.
+Ce fichier s'applique à toute intervention sur `Patricked-code/Ekyc`.
 
 ## Démarrage obligatoire
 

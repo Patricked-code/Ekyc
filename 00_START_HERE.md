@@ -1,8 +1,8 @@
 # 00_START_HERE — Point d'entrée obligatoire
 
 > Statut : `APPLICABLE`  
-> Dépôt : `{{REPOSITORY}}`  
-> Projet : `{{PROJECT_NAME}}`
+> Dépôt : `Patricked-code/Ekyc`  
+> Projet : `Ekyc`
 
 ## Source/control-plane special entry
 

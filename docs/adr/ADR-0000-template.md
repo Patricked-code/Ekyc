@@ -1,8 +1,8 @@
 # ADR-0000 — Initialize Governed Repository
 
 - Status: `ACCEPTED`
-- Date: `{{INITIALIZED_AT}}`
-- Repository: `{{REPOSITORY}}`
+- Date: `2026-09-27T04:12:08+00:00`
+- Repository: `Patricked-code/Ekyc`
 
 ## Context
 

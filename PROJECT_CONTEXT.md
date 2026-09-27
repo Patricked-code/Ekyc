@@ -1,11 +1,11 @@
 # PROJECT_CONTEXT
 
-- Repository: `{{REPOSITORY}}`
-- Project: `{{PROJECT_NAME}}`
-- Project type: `{{PROJECT_TYPE}}`
-- Owner: `{{OWNER}}`
-- Canonical branch: `{{CANONICAL_BRANCH}}`
-- Initialized at: `{{INITIALIZED_AT}}`
+- Repository: `Patricked-code/Ekyc`
+- Project: `Ekyc`
+- Project type: `generic`
+- Owner: `@Patricked-code`
+- Canonical branch: `main`
+- Initialized at: `2026-09-27T04:12:08+00:00`
 
 ## Mission
 

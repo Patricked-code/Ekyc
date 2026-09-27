@@ -1,9 +1,9 @@
 # WORK_LOG — Journal d'exécution
 
-## {{INITIALIZED_AT}} — Template instantiated
+## 2026-09-27T04:12:08+00:00 — Template instantiated
 
-- Repository: `{{REPOSITORY}}`
-- Canonical branch: `{{CANONICAL_BRANCH}}`
+- Repository: `Patricked-code/Ekyc`
+- Canonical branch: `main`
 - Action: initialize governed repository
 - Result: `PENDING`
 
