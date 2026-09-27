@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.2.0",
+  "control_plane_repository": "chainsolutions-wealthtech/Governed-Repository-Template",
+  "source_role": "CENTRAL_GOVERNANCE_CONTROL_PLANE",
+  "client_role_after_instantiation": "GOVERNED_TARGET_CLIENT",
+  "transport": {
+    "primary": "GITHUB_ISSUE_CONVERSATION",
+    "local_engine": "scripts/governed_request.py",
+    "issue_bridge": "scripts/control_plane_issue_bridge.py"
+  },
+  "lifecycle": [
+    "REQUEST_CREATED",
+    "WAITING_FOR_ANSWER",
+    "PLAN_READY",
+    "WAITING_FOR_PLAN_APPROVAL",
+    "EXECUTING_PREPARATION",
+    "HOLD_FOR_REVIEW",
+    "HANDOFF_READY",
+    "CLOSED"
+  ],
+  "principles": [
+    "CONTROL_PLANE_PREPARES_TARGET_WORK",
+    "ONE_QUESTION_OR_ACTION_REQUEST_AT_A_TIME",
+    "AGENT_RESPONSES_ADVANCE_STATE_MACHINE",
+    "TARGET_MUTATION_REQUIRES_EXPLICIT_AUTHORITY",
+    "TARGET_EVIDENCE_NE_ASSUMED_STATE",
+    "CONTROL_PLANE_STATE_STAYS_OUT_OF_TEMPLATE_CONTENT",
+    "HANDOFF_IS_EXPLICIT",
+    "CROSS_REPOSITORY_MUTATION_ONLY_VIA_AUTHORIZED_EXECUTOR",
+    "STANDARD_GITHUB_TOKEN_CANNOT_CREATE_TARGET_REPOSITORIES",
+    "CREATOR_CREDENTIALS_STAY_OUTSIDE_GIT",
+    "SOURCE_CONTROL_PLANE_MEMORY_NE_DISTRIBUTED_PROJECT_STATE",
+    "CONTROL_PLANE_MEMORY_FRESHNESS_REQUIRED",
+    "SOURCE_ONLY_MEMORY_REMOVED_FROM_CLIENTS",
+    "CASE_REPLAY_LEDGER_REQUIRED_FOR_ACTIVE_MACRO_CASE",
+    "OWNER_FEEDBACK_MUST_BE_RECONCILED_BEFORE_CONTINUATION",
+    "CANONICAL_MEMORY_HAS_QUERYABLE_RELATIONAL_PROJECTION",
+    "DATABASE_EVOLVES_BY_VERSIONED_MIGRATIONS",
+    "AGENT_ACTIVITY_MUST_BE_DURABLY_RECORDED",
+    "DISCOVERED_TASKS_MUST_ENTER_CANONICAL_QUEUE_BEFORE_CONTINUATION",
+    "TARGET_ARCHITECTURE_NE_LIVE_CURRENT_STATE",
+    "CANONICAL_AUTHORITIES_REVISIONED_MONOTONICALLY",
+    "APPEND_HISTORY_PLUS_CURRENT_PROJECTION",
+    "WORKFLOW_SEMANTICS_BEFORE_FRONTEND",
+    "CANONICAL_MEMORY_AND_RELATIONAL_PROJECTION_EVOLVE_TOGETHER",
+    "STRUCTURED_DURABLE_CHANGES_MUST_BE_PROJECTED_OR_MARKED_PENDING",
+    "TWO_STAGE_AGENT_PURPOSE_ROUTING_TARGET",
+    "HUMAN_TECHNICAL_EXECUTION_NOT_REQUIRED",
+    "AUTOMATION_MUST_NOT_BYPASS_AUTHORITY_OR_APPROVAL",
+    "CLIENT_UPGRADE_VERSION_FROM_TEMPLATE_MANIFEST",
+    "CLIENT_UPGRADE_PRESERVES_MUTABLE_PROJECT_STATE",
+    "CLIENT_CI_SOURCE_ONLY_STEPS_SKIP_CLEANLY",
+    "PORTABLE_SELFTESTS_RESET_ALL_BOOTSTRAP_INFLUENCING_SYNTHETIC_STATE",
+    "SELFTEST_MUTATES_TEMPORARY_COPY_ONLY",
+    "SELFTEST_SUBPROCESS_FAILURES_EXPOSE_DIAGNOSTICS"
+  ],
+  "source_only_paths": [
+    ".github/workflows/governed-control-plane.yml",
+    ".github/ISSUE_TEMPLATE/governed-request.yml",
+    "docs/control-plane",
+    ".governance/control-plane-state",
+    ".governance/control-plane-db"
+  ],
+  "current_role": "CENTRAL_GOVERNANCE_CONTROL_PLANE",
+  "executor": {
+    "repository_creation": "scripts/control_plane_create_repository.py",
+    "authority_policy": ".governance/repository-creation-executor.json",
+    "github_endpoint": "POST /repos/chainsolutions-wealthtech/Governed-Repository-Template/generate"
+  },
+  "source_memory": {
+    "human_authorities": [
+      "docs/control-plane/CURRENT_STATE.md",
+      "docs/control-plane/SUIVI.md",
+      "docs/control-plane/NEXT_ACTION.md",
+      "docs/control-plane/DECISIONS_LOG.md",
+      "docs/control-plane/TASKS.md",
+      "docs/control-plane/PROGRAM.md",
+      "docs/control-plane/CASE1_REPLAY_LEDGER.md",
+      "docs/control-plane/DATA_MODEL.md",
+      "docs/control-plane/AGENT_ACTIVITY_LOG.md",
+      "docs/control-plane/CANONICAL_ARCHITECTURE.md",
+      "docs/control-plane/IMPORTED_MEMORY_VERIFICATION.md"
+    ],
+    "machine_authorities": [
+      ".governance/control-plane-state/current.json",
+      ".governance/control-plane-state/checkpoint.json",
+      ".governance/control-plane-state/handoff.json",
+      ".governance/control-plane-state/tasks.json",
+      ".governance/control-plane-state/case1-replay.json",
+      ".governance/control-plane-state/agent-activity.json",
+      ".governance/control-plane-state/canonical-architecture.json"
+    ],
+    "issue_role": "ORCHESTRATION_AND_EVIDENCE_NOT_CANONICAL_SOURCE",
+    "conversation_role": "SUPPLEMENTAL_CONTEXT_ONLY"
+  },
+  "canonical_memory_database": {
+    "role": "QUERYABLE_PROJECTION_OF_VERSIONED_CANONICAL_MEMORY",
+    "source_of_truth": "VERSIONED_SQL_JSON_AND_CONTROL_PLANE_AUTHORITIES",
+    "runtime_database": "MATERIALIZED_NOT_COMMITTED_BINARY",
+    "current_engine": "SQLITE_VALIDATION_PROJECTION",
+    "target_engine": "POSTGRESQL_COMPATIBLE_APPLICATION_DATABASE",
+    "frontend_future": true,
+    "source_paths": [
+      ".governance/control-plane-db/001_schema.sql",
+      ".governance/control-plane-db/catalog.json",
+      ".governance/control-plane-db/runtime-seed.json",
+      ".governance/control-plane-db/materialize.py",
+      ".governance/control-plane-db/002_agent_activity.sql",
+      ".governance/control-plane-db/003_canonical_authorities.sql"
+    ],
+    "invariants": [
+      "DATABASE_BINARY_NOT_CANONICAL_IN_GIT",
+      "SCHEMA_AND_SEEDS_AUDITABLE_IN_GIT",
+      "ALL_STRUCTURING_CASES_SHARE_THE_SAME_RELATIONAL_MODEL",
+      "OWNER_FEEDBACK_AND_DECISIONS_ARE_FIRST_CLASS_RECORDS",
+      "CHECKPOINTS_AND_HANDOFFS_ARE_QUERYABLE",
+      "CLIENT_REPOSITORIES_DO_NOT_RECEIVE_CONTROL_PLANE_DATABASE",
+      "CANONICAL_AUTHORITIES_HAVE_MONOTONE_REVISIONS",
+      "IMPORTED_MEMORY_CANNOT_GRANT_LIVE_APPROVAL",
+      "TARGET_ARCHITECTURE_NE_CURRENT_EXECUTION_STATE",
+      "EVENT_HISTORY_AND_CURRENT_PROJECTION_COEXIST",
+      "DURABLE_STRUCTURED_MEMORY_PROJECTS_TO_RELATIONAL_MODEL",
+      "UNPROJECTED_STRUCTURED_MEMORY_MUST_BE_EXPLICITLY_MARKED_PENDING"
+    ],
+    "schema_version": "1.2.0",
+    "projection_contract": {
+      "mode": "CONTINUOUS_GOVERNED_PROJECTION",
+      "git_authority_first": true,
+      "structured_memory_categories": [
+        "OWNER_FEEDBACK",
+        "DECISION",
+        "AGENT_ACTIVITY",
+        "PROGRAM_TASK_CHANGE",
+        "EVIDENCE",
+        "CHECKPOINT",
+        "HANDOFF",
+        "INTAKE",
+        "ARTIFACT",
+        "CANONICAL_AUTHORITY_REVISION"
+      ],
+      "unprojected_state": "PENDING_PROJECTION_EXPLICIT_ONLY"
+    }
+  },
+  "canonical_architecture": {
+    "authority_id": "CP-ARCH-001",
+    "path": "docs/control-plane/CANONICAL_ARCHITECTURE.md",
+    "machine_projection": ".governance/control-plane-state/canonical-architecture.json",
+    "scope": "CONTROL_PLANE_SOURCE_ONLY",
+    "status": "ACCEPTED_TARGET_ARCHITECTURE"
+  },
+  "agent_purpose_routing": {
+    "status": "PLANNED_NOT_ACTIVE",
+    "stage_1": [
+      "WORK_ON_CONTROL_PLANE",
+      "APPLY_GOVERNANCE_CASE"
+    ],
+    "stage_2_control_plane": [
+      "CODE_IMPLEMENTATION",
+      "EXECUTE_EXISTING_TASK",
+      "ADD_OR_ENRICH_INFORMATION"
+    ],
+    "stage_2_cases": [
+      "CREATE_NEW_REPOSITORY",
+      "ADOPT_EXISTING_REPOSITORY",
+      "MAP_EXISTING_PROJECT",
+      "LAB_EVOLUTION"
+    ],
+    "human_interaction": "ANSWERS_CHOICES_AND_EXPLICIT_APPROVALS_ONLY",
+    "technical_execution": "AUTOMATED_WHEN_AUTHORIZED",
+    "activation_gate": "IMPLEMENT_AND_PASS_ROUTER_REGRESSION_MATRIX"
+  },
+  "client_upgrade_contract": {
+    "version_source": ".governance/TEMPLATE_MANIFEST.json",
+    "exact_head_required": true,
+    "static_surface_sync_only": true,
+    "preserve_mutable_paths": [
+      ".governance/work/work-items.json",
+      ".governance/work/claims.json",
+      ".governance/sessions/sessions.json",
+      ".governance/canonical-memory/current.json"
+    ],
+    "source_only_ci_behavior": "SKIP_IF_ABSENT"
+  },
+  "portable_selftest_contract": {
+    "fixture_scope": "TEMPORARY_COPY_ONLY",
+    "reset_domains": [
+      "PROFILE",
+      "PROJECT_PROFILE",
+      "INFRASTRUCTURE_INTENT",
+      "LOCAL_ENTRY",
+      "MCP_BINDING",
+      "ACCESS_PLAN",
+      "WORKFLOW_MODEL",
+      "WORK_ITEMS",
+      "CLAIMS",
+      "SESSIONS",
+      "CANONICAL_MEMORY"
+    ],
+    "real_client_state_mutated": false,
+    "subprocess_diagnostics": true
+  }
+}

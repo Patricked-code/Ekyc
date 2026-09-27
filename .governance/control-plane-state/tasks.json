@@ -1,0 +1,787 @@
+{
+  "schema_version": "1.0.0",
+  "revision": 26,
+  "work_package_id": "CREATE_NEW_REPOSITORY_COMPLETION",
+  "objective": "Complete canonical program #12 without skipping chronological gates",
+  "items": [
+    {
+      "id": "P12-S1",
+      "status": "DONE",
+      "depends_on": [],
+      "next_action": null
+    },
+    {
+      "id": "P12-S2",
+      "status": "DONE",
+      "depends_on": [
+        "P12-S1"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "P12-S3",
+      "status": "DONE",
+      "depends_on": [
+        "P12-S2"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "P12-S4",
+      "status": "DONE",
+      "depends_on": [
+        "P12-S3"
+      ],
+      "next_action": null,
+      "evidence": [
+        "C1-12 normal governed entry proof completed on Gouvern#4"
+      ]
+    },
+    {
+      "id": "P12-S5",
+      "status": "IN_PROGRESS",
+      "depends_on": [
+        "P12-S4"
+      ],
+      "next_action": "SECOND_FRESH_REPOSITORY_E2E"
+    },
+    {
+      "id": "P12-S6",
+      "status": "PENDING",
+      "depends_on": [
+        "P12-S5"
+      ],
+      "next_action": "CLOSE_CREATE_NEW_REPOSITORY_CASE"
+    },
+    {
+      "id": "C1-12-A",
+      "status": "DONE",
+      "depends_on": [
+        "P12-S3"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-B",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-A"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-C",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-B"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-D",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-C"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-E",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-D"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-F",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-E"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-G",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-F"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-H",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-G"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-I",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-H"
+      ],
+      "next_action": null,
+      "evidence": [
+        "Current framework release validated on external CASE 1 pilot through V2.8.6 revalidation and normal-entry proof"
+      ]
+    },
+    {
+      "id": "C1-12-J",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-I-B"
+      ],
+      "next_action": null,
+      "evidence": [
+        "C1-12-J-C completed at pilot 671774dfc8e8be8eac2b50d5fb8f0928591694b3"
+      ]
+    },
+    {
+      "id": "C1-12-K-A",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-J"
+      ],
+      "blocks": [
+        "C1-12-K"
+      ],
+      "next_action": null,
+      "evidence": [
+        "Template PR #47",
+        "RED Governance CI run 36292333079 failed exactly at repository-local governed agent entry permission regression",
+        "GREEN Governance CI run 36292388479 PASS after local-start token Contents write correction",
+        "GitHub Create repository dispatch event requires fine-grained Contents write permission",
+        "Control plane issue #4 comment 5852371953 requested governed machine local start",
+        "Pilot remained unchanged at 671774dfc8e8be8eac2b50d5fb8f0928591694b3 while framework defect was corrected"
+      ],
+      "defect_code": "LOCAL_START_REPOSITORY_DISPATCH_CONTENTS_WRITE_REQUIRED"
+    },
+    {
+      "id": "C1-12-K",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-J"
+      ],
+      "next_action": null,
+      "evidence": [
+        "Patricked-code/Gouvern#4 created by governed_local_start at 671774dfc8e8be8eac2b50d5fb8f0928591694b3",
+        "Target repository_dispatch run 36292612321 PASS",
+        "Mode NORMAL_GOVERNED_ENTRY observed on LOCAL-000004"
+      ]
+    },
+    {
+      "id": "C1-12-L",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-K"
+      ],
+      "next_action": null,
+      "evidence": [
+        "Patricked-code/Gouvern#4 state mode NORMAL_GOVERNED_ENTRY",
+        "LOCAL-000004 revision 6 reached LOCAL_HANDOFF_READY"
+      ]
+    },
+    {
+      "id": "C1-12-M",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-L"
+      ],
+      "next_action": null,
+      "evidence": [
+        "Pilot HEAD unchanged at 671774dfc8e8be8eac2b50d5fb8f0928591694b3",
+        "local-entry state blob e60588735b30569defc8511365462519790118be unchanged",
+        "sessions blob 1369b27d9bd2dd51a59f7c84edf94f9f83039110 unchanged; sole first-agent session LOCAL-000002-S1",
+        "work-items blob 3647cc498b8404de32096b9c9a6783d3d6e65d60 unchanged; WORK-PROJECT-001 remains READY",
+        "claims blob 728be6d3c18809ce9202a4acd2635a2fcc6936c0 unchanged and empty"
+      ]
+    },
+    {
+      "id": "C1-12-N",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-M"
+      ],
+      "next_action": null,
+      "evidence": [
+        "Patricked-code/Gouvern#4 LOCAL-000004 revision 6 LOCAL_HANDOFF_READY",
+        "Machine command runs 36292715800, 36292741820, 36292775187, 36292816422, 36292850873 PASS"
+      ]
+    },
+    {
+      "id": "C1-12-O",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-N"
+      ],
+      "next_action": null,
+      "evidence": [
+        "C1-12 K/L/M/N proof complete; STEP 4 exit satisfied"
+      ]
+    },
+    {
+      "id": "C1-12-P-A",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-O"
+      ],
+      "blocks": [
+        "C1-12-P"
+      ],
+      "next_action": null,
+      "defect_code": "CONTROL_PLANE_DB_CASE1_PHASE_VALIDATION_HARDCODED_C1_12",
+      "evidence": [
+        "PR #48 RED Governance CI run 36293227831 failed only at canonical DB materialization",
+        "Failure: CASE1 active phase mismatch: [('C1-13',)]",
+        "materialize.py validator changed from hard-coded C1-12 to single-active-phase equals runs.current_phase_id invariant",
+        "PR #48 GREEN Governance CI run 36293287750 PASS"
+      ]
+    },
+    {
+      "id": "C1-12-P",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-O"
+      ],
+      "next_action": null,
+      "evidence": [
+        "Canonical human, machine and relational projections reconciled in this change"
+      ]
+    },
+    {
+      "id": "ARCH-001",
+      "status": "DONE",
+      "depends_on": [],
+      "next_action": "ESTABLISH_CANONICAL_ARCHITECTURE"
+    },
+    {
+      "id": "ARCH-002",
+      "status": "DONE",
+      "depends_on": [],
+      "next_action": "ADD_AUTHORITY_REVISION_REGISTRY"
+    },
+    {
+      "id": "ARCH-003",
+      "status": "DONE",
+      "depends_on": [],
+      "next_action": "COMPLETE_HISTORY_MATERIALIZER_LOADERS"
+    },
+    {
+      "id": "ARCH-004",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "ADD_EVENT_REDUCER_RECONSTRUCTION_VALIDATION"
+    },
+    {
+      "id": "ARCH-005",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "FORMALIZE_ROLE_CAPABILITY_AUTHORIZATION"
+    },
+    {
+      "id": "ARCH-006",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "STRENGTHEN_CROSS_PROJECTION_CI"
+    },
+    {
+      "id": "ARCH-007",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "GENERATE_DERIVED_PDF_FROM_MARKDOWN"
+    },
+    {
+      "id": "ARCH-008",
+      "status": "FUTURE",
+      "depends_on": [],
+      "next_action": "EXPOSE_GOVERNANCE_API"
+    },
+    {
+      "id": "ARCH-009",
+      "status": "FUTURE",
+      "depends_on": [],
+      "next_action": "ADD_POSTGRES_RUNTIME_PROJECTION"
+    },
+    {
+      "id": "ARCH-010",
+      "status": "FUTURE",
+      "depends_on": [],
+      "next_action": "BUILD_ADMIN_WEB_APPLICATION"
+    },
+    {
+      "id": "IDN-001",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "DEFINE_IDENTITY_MODEL"
+    },
+    {
+      "id": "IDN-002",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "AUTO_CAPTURE_GITHUB_ACTOR_PERMISSION"
+    },
+    {
+      "id": "IDN-003",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "ADD_PRINCIPAL_REGISTRY"
+    },
+    {
+      "id": "IDN-004",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "ADD_CONNECTION_EVENT_REGISTRY"
+    },
+    {
+      "id": "IDN-005",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "DEFINE_SESSION_ID_RESUME_RULES"
+    },
+    {
+      "id": "IDN-006",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "AUTO_CREATE_OR_RESUME_SESSION"
+    },
+    {
+      "id": "IDN-007",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "BIND_AGENT_ROLE"
+    },
+    {
+      "id": "IDN-008",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "CAPTURE_AUTHORITY_SNAPSHOT"
+    },
+    {
+      "id": "IDN-009",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "ROUTE_IDENTITY_SESSION_ROLE_AUTHORITY_ACTION_INTENT"
+    },
+    {
+      "id": "IDN-010",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "PERSIST_SESSION_CONNECTION_EVENTS"
+    },
+    {
+      "id": "IDN-011",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "ADD_IDENTITY_SESSION_CI_SELFTESTS"
+    },
+    {
+      "id": "IDN-012",
+      "status": "PLANNED",
+      "depends_on": [],
+      "next_action": "ADD_SOURCE_CONTROL_PLANE_ENTRY_ADAPTER"
+    },
+    {
+      "id": "IDN-013",
+      "status": "FUTURE",
+      "depends_on": [],
+      "next_action": "EXPOSE_IDENTITY_SESSION_TO_API_UI"
+    },
+    {
+      "id": "RTE-001",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "DEFINE_ENTRY_PURPOSE"
+    },
+    {
+      "id": "RTE-002",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "DEFINE_CONTROL_PLANE_WORK_KINDS"
+    },
+    {
+      "id": "RTE-003",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "DEFINE_EXACT_FOUR_CASE_SELECTION"
+    },
+    {
+      "id": "RTE-004",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "BUILD_TWO_STAGE_AUTOMATED_ROUTER"
+    },
+    {
+      "id": "RTE-005",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "AUTO_LOAD_CONTROL_PLANE_AUTHORITIES"
+    },
+    {
+      "id": "RTE-006",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "AUTO_RESOLVE_TASK_OR_INFORMATION_INTAKE"
+    },
+    {
+      "id": "RTE-007",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "DISPATCH_CASE_STATE_MACHINE"
+    },
+    {
+      "id": "RTE-008",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "PERSIST_PURPOSE_AND_ROUTING_EVENTS"
+    },
+    {
+      "id": "RTE-009",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "AUTOMATE_AUTHORIZED_TECHNICAL_EXECUTION"
+    },
+    {
+      "id": "RTE-010",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "FAIL_CLOSED_AMBIGUOUS_ROUTING"
+    },
+    {
+      "id": "RTE-011",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "ADD_ROUTER_REGRESSION_MATRIX"
+    },
+    {
+      "id": "RTE-012",
+      "status": "PLANNED",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "RESUME_EXACT_UNANSWERED_STEP"
+    },
+    {
+      "id": "RTE-013",
+      "status": "FUTURE",
+      "depends_on": [
+        "IDN-006"
+      ],
+      "next_action": "EXPOSE_ROUTER_API_UI"
+    },
+    {
+      "id": "C1-12-I-A",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-H"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-I-B",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-I-A"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-J-A",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-I-B"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-J-B",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-J-A"
+      ],
+      "next_action": null
+    },
+    {
+      "id": "C1-12-J-C",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-J-B"
+      ],
+      "next_action": null,
+      "evidence": [
+        "Patricked-code/Gouvern@671774dfc8e8be8eac2b50d5fb8f0928591694b3",
+        "Pilot Governance CI 36275524530 PASS",
+        "Template version 2.8.6 confirmed from .governance/TEMPLATE_MANIFEST.json"
+      ]
+    },
+    {
+      "id": "C1-12-J-C-A",
+      "status": "DONE",
+      "depends_on": [
+        "C1-12-J-B"
+      ],
+      "blocks": [
+        "C1-12-J-C"
+      ],
+      "next_action": null,
+      "evidence": [
+        "Template PR #42 unresolved review thread PRRT_kwDOUqP9V86mWsAw",
+        "Template PR #42 unresolved review thread PRRT_kwDOUqP9V86mWsAx",
+        "Template main 2c70fc82aed4fa8f7eebb7f49b2573e6c57e9e59",
+        "Template PR #43 merged",
+        "Template main 113c50aa765ae886cd7a085637b8d5dbb5c2766b",
+        "Governance CI run 36289874574 PASS",
+        "PR #42 review threads resolved"
+      ]
+    },
+    {
+      "id": "GMC-01",
+      "status": "PLANNED",
+      "depends_on": [
+        "P12-S6"
+      ],
+      "next_action": "SEPARATE_GOVERNANCE_MODEL_FROM_APPLICATION_STRATEGIES"
+    },
+    {
+      "id": "GMC-02",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-01"
+      ],
+      "next_action": "DEFINE_CANONICAL_MODEL_ANATOMY_AND_IDS"
+    },
+    {
+      "id": "GMC-03",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-02"
+      ],
+      "next_action": "INVENTORY_NORMALIZE_GOVERNANCE_DOMAINS"
+    },
+    {
+      "id": "GMC-04",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-03"
+      ],
+      "next_action": "INVENTORY_DOMAIN_CAPABILITIES"
+    },
+    {
+      "id": "GMC-05",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-04"
+      ],
+      "next_action": "DECOMPOSE_CAPABILITIES_INTO_COMPONENTS"
+    },
+    {
+      "id": "GMC-06",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-05"
+      ],
+      "next_action": "INVENTORY_OBJECTS_FIELDS_RELATIONSHIPS"
+    },
+    {
+      "id": "GMC-07",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-06"
+      ],
+      "next_action": "INVENTORY_STATE_MACHINES"
+    },
+    {
+      "id": "GMC-08",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-07"
+      ],
+      "next_action": "INVENTORY_TRANSITIONS_AND_RECOVERY"
+    },
+    {
+      "id": "GMC-09",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-08"
+      ],
+      "next_action": "BUILD_CONTROL_REGISTRY"
+    },
+    {
+      "id": "GMC-10",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-09"
+      ],
+      "next_action": "BUILD_GATE_REGISTRY"
+    },
+    {
+      "id": "GMC-11",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-10"
+      ],
+      "next_action": "BUILD_EVIDENCE_TYPE_REGISTRY"
+    },
+    {
+      "id": "GMC-12",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-11"
+      ],
+      "next_action": "MAP_MODEL_TO_IMPLEMENTATION_AND_TESTS"
+    },
+    {
+      "id": "GMC-13",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-12"
+      ],
+      "next_action": "BUILD_GLOBAL_DEPENDENCY_GRAPH"
+    },
+    {
+      "id": "GMC-16",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-15"
+      ],
+      "next_action": "MATERIALIZE_MODEL_IN_EXISTING_RELATIONAL_MEMORY"
+    },
+    {
+      "id": "GMC-14",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-13"
+      ],
+      "next_action": "BUILD_APPLICABILITY_AND_SEMANTIC_COMPARATOR"
+    },
+    {
+      "id": "GMC-15",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-14"
+      ],
+      "next_action": "ADD_FIELD_CONTROL_TEST_LEVEL_COMPARISON"
+    },
+    {
+      "id": "GMC-17",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-16"
+      ],
+      "next_action": "INTEGRATE_MODEL_LOADING_VALIDATION_IN_CONTROL_PLANE"
+    },
+    {
+      "id": "GMC-18",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-17"
+      ],
+      "next_action": "REBIND_CREATE_ADOPT_MAP_LAB_TO_SHARED_MODEL"
+    },
+    {
+      "id": "GMC-19",
+      "status": "PLANNED",
+      "depends_on": [
+        "GMC-18"
+      ],
+      "next_action": "CROSS_CASE_VALIDATE_AND_FREEZE_GOVERNANCE_MODEL_1_0_0"
+    }
+  ],
+  "unique_executable_item": "P12-S5",
+  "gmc_work_package_contract": {
+    "decision_id": "CPD-028",
+    "interpretation": "GMC-Gxx_WORK_PACKAGE__GMC-Gxx-Tyy_ATOMIC_TASK",
+    "planning_only": true,
+    "implementation_authorized": false,
+    "blueprint_required_before_group_execution": true,
+    "blueprint_fields": [
+      "MISSION",
+      "OBJECTIVE",
+      "QUESTIONS_TO_RESOLVE",
+      "INPUTS",
+      "PREREQUISITES",
+      "WHERE_TO_LOOK",
+      "SEARCH_ORDER",
+      "SEARCH_METHOD",
+      "ATOMIC_TASKS",
+      "CLASSIFICATION_RULES",
+      "EXPECTED_FINDINGS",
+      "EXPECTED_RESULTS",
+      "ARTIFACTS",
+      "OUTPUT_DESTINATION",
+      "EVIDENCE_REQUIRED",
+      "VALIDATION",
+      "DONE_WHEN",
+      "BLOCK_OR_HOLD_IF",
+      "EXIT_GATE",
+      "OUTPUTS",
+      "CONSUMED_BY"
+    ],
+    "atomic_task_id_pattern": "GMC-Gxx-Tyy",
+    "dependency_rule": "VALIDATED_OUTPUTS_AND_EVIDENCE_REQUIRED",
+    "active_unique_executable_item_unchanged": "C1-12-J-C",
+    "human_blueprint": "docs/control-plane/GOVERNANCE_MODEL_EXECUTION_BLUEPRINT.md",
+    "machine_blueprint": ".governance/control-plane-state/governance-model-execution-blueprint.json",
+    "work_package_count": 19,
+    "atomic_task_count": 174,
+    "chronological_order": [
+      "GMC-G01",
+      "GMC-G02",
+      "GMC-G03",
+      "GMC-G04",
+      "GMC-G05",
+      "GMC-G06",
+      "GMC-G07",
+      "GMC-G08",
+      "GMC-G09",
+      "GMC-G10",
+      "GMC-G11",
+      "GMC-G12",
+      "GMC-G13",
+      "GMC-G14",
+      "GMC-G15",
+      "GMC-G16",
+      "GMC-G17",
+      "GMC-G18",
+      "GMC-G19"
+    ],
+    "planned_knowledge_artifact_count": 85,
+    "dependency_dimensions": [
+      "TASK_DEPENDENCY",
+      "ARTIFACT_DEPENDENCY",
+      "EVIDENCE_DEPENDENCY"
+    ],
+    "downstream_unlock_rule": "VALIDATED_TASK_EXIT_PLUS_VALIDATED_SUFFICIENT_ARTIFACTS_PLUS_REQUIRED_EVIDENCE_PLUS_EXIT_CONTROLS_PASS",
+    "output_driven_progression": true,
+    "status_only_unlock_forbidden": true,
+    "decision_ids": [
+      "CPD-028",
+      "CPD-029"
+    ],
+    "final_assembly_work_package": "GMC-G19"
+  }
+}

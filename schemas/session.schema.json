@@ -1,0 +1,102 @@
+{
+  "title": "Governance Session",
+  "type": "object",
+  "required": [
+    "session_id",
+    "agent_identity",
+    "provider",
+    "entry_action",
+    "entry_action_provenance",
+    "connection_intent",
+    "connection_intent_provenance",
+    "repository",
+    "starting_head_sha",
+    "last_observed_head_sha",
+    "status"
+  ],
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "agent_identity": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "provider_conversation_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provider_conversation_ref_provenance": {
+      "enum": [
+        "PROVIDED_BY_CLIENT",
+        "UNAVAILABLE"
+      ]
+    },
+    "connection_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "repository": {
+      "type": "string"
+    },
+    "starting_head_sha": {
+      "type": "string"
+    },
+    "last_observed_head_sha": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ACTIVE",
+        "CLOSED"
+      ]
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "last_seen_at": {
+      "type": "string"
+    },
+    "connection_intent": {
+      "enum": [
+        "OBSERVE",
+        "CONTEXT_INTAKE",
+        "INFORMATION_INTAKE",
+        "WORK_REQUEST",
+        "CODE_CHANGE",
+        "REVIEW",
+        "INFRASTRUCTURE",
+        "UNKNOWN"
+      ]
+    },
+    "connection_intent_provenance": {
+      "enum": [
+        "PROVIDED_BY_CLIENT",
+        "DEFAULT_UNKNOWN"
+      ]
+    },
+    "entry_action": {
+      "enum": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION",
+        "CONTINUE_GOVERNED_WORK",
+        "UNKNOWN"
+      ]
+    },
+    "entry_action_provenance": {
+      "enum": [
+        "PROVIDED_BY_CLIENT",
+        "DEFAULT_UNKNOWN"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "CREATE_NEW_REPOSITORY",
+  "authority": "docs/control-plane/CASE1_REPLAY_LEDGER.md",
+  "issue_mirror": 12,
+  "historical_pilot": "Patricked-code/Gouvern",
+  "pilot_baseline_commit": "23975e0435e63fb45d7436d1f23ce8ce0a450a5f",
+  "current_phase": "C1-13",
+  "current_status": "IN_PROGRESS",
+  "unique_next_action": "P12_S5_SECOND_FRESH_REPOSITORY_E2E",
+  "phases": [
+    {
+      "id": "C1-00",
+      "name": "creation request",
+      "status": "DONE",
+      "owner_feedback": "owner/name/visibility"
+    },
+    {
+      "id": "C1-01",
+      "name": "automatic bootstrap",
+      "status": "DONE"
+    },
+    {
+      "id": "C1-02",
+      "name": "business baseline",
+      "status": "DONE",
+      "owner_feedback": "baseline answers/approval"
+    },
+    {
+      "id": "C1-03",
+      "name": "setup-now choice",
+      "status": "DONE",
+      "owner_feedback": "setup_repository_now"
+    },
+    {
+      "id": "C1-04",
+      "name": "optional MCP link choice",
+      "status": "DONE",
+      "owner_feedback": "link_mcp_server"
+    },
+    {
+      "id": "C1-05",
+      "name": "MCP transport choice",
+      "status": "DONE",
+      "choice_space": [
+        "DIRECT_MCP_TOKEN",
+        "SSH",
+        "BOTH"
+      ],
+      "historical_choice": "BOTH"
+    },
+    {
+      "id": "C1-06",
+      "name": "MCP discovery configuration",
+      "status": "DONE"
+    },
+    {
+      "id": "C1-07",
+      "name": "credential/discovery",
+      "status": "DONE",
+      "historical_result": "PASS_NON_DEGRADED"
+    },
+    {
+      "id": "C1-08",
+      "name": "domain binding",
+      "status": "DONE",
+      "historical_choice": {
+        "mode": "UNRESOLVED"
+      }
+    },
+    {
+      "id": "C1-09",
+      "name": "workflow model",
+      "status": "DONE",
+      "historical_choice": "STANDARD_GOVERNED_FLOW"
+    },
+    {
+      "id": "C1-10",
+      "name": "setup approval",
+      "status": "DONE",
+      "owner_approval_required": true
+    },
+    {
+      "id": "C1-11",
+      "name": "apply baseline",
+      "status": "DONE",
+      "evidence_sha": "23975e0435e63fb45d7436d1f23ce8ce0a450a5f"
+    },
+    {
+      "id": "C1-12",
+      "name": "normal governed entry proof",
+      "status": "DONE",
+      "live_state": {
+        "issue": "Patricked-code/Gouvern#3",
+        "pilot_head": "671774dfc8e8be8eac2b50d5fb8f0928591694b3",
+        "template_version": "2.8.6",
+        "completed_fixes": [
+          "V2.8.1_MACHINE_LOCAL_START",
+          "V2.8.2_CLIENT_POLICY_SYNC",
+          "V2.8.3_PORTABLE_BOOTSTRAP_FIXTURE",
+          "V2.8.4_PORTABLE_CONNECTION_INTENT_FIX",
+          "V2.8.5_DYNAMIC_CLIENT_UPGRADER",
+          "V2.8.6_COMPLETE_PORTABLE_INTENT_FIXTURE",
+          "PR43_GMC_INTEGRITY_RECONCILIATION",
+          "V2_8_6_EXTERNAL_PILOT_REVALIDATION_PASS",
+          "PR47_MACHINE_LOCAL_START_DISPATCH_PERMISSION"
+        ],
+        "current_blocker": null,
+        "ci_run": 36262734626,
+        "root_cause": "CONNECTION_INTENT_SELFTEST_INHERITED_INSTANTIATED_CLIENT_WORK_ITEMS",
+        "framework_fix_version_candidate": "2.8.5",
+        "product_repository": "chainsolutions-wealthtech/Governed-Repository-Template",
+        "pilot_repository_role": "EXTERNAL_VALIDATION_ONLY",
+        "framework_fix_release_subject": "02173120acfa3941e84bf69c89dac0e8d74b47ce",
+        "current_step": "COMPLETE",
+        "discovered_upgrade_defects": [
+          "UPGRADER_HARDCODED_2_8_3",
+          "PORTABLE_CONNECTION_INTENT_TEST_NOT_DISTRIBUTED",
+          "CLIENT_CI_SOURCE_ONLY_DB_STEP_UNGUARDED",
+          "PR42_GMC_ARTIFACT_CONSUMER_DEPENDENCY_DIVERGENCE",
+          "PR42_GOVMODEL_AUTHORITY_REVISION_NOT_ADVANCED"
+        ],
+        "pilot_ci_run": 36275524530,
+        "framework_integrity_fix_pr": 43,
+        "framework_integrity_fix_merge_subject": "113c50aa765ae886cd7a085637b8d5dbb5c2766b",
+        "framework_integrity_fix_ci_run": 36289874574,
+        "framework_integrity_fix_ci_result": "PASS",
+        "v2_8_6_pilot_revalidation": {
+          "status": "PASS",
+          "head": "671774dfc8e8be8eac2b50d5fb8f0928591694b3",
+          "governance_ci_run": 36275524530,
+          "governance_ci_result": "PASS",
+          "upgrade_replay_required": false
+        },
+        "normal_entry_target_issue": "Patricked-code/Gouvern#4",
+        "normal_entry_request_id": "LOCAL-000004",
+        "normal_entry_mode": "NORMAL_GOVERNED_ENTRY",
+        "normal_entry_status": "LOCAL_HANDOFF_READY",
+        "normal_entry_final_revision": 6,
+        "normal_entry_target_run": 36292612321,
+        "normal_entry_command_runs": [
+          36292715800,
+          36292741820,
+          36292775187,
+          36292816422,
+          36292850873
+        ],
+        "no_first_agent_duplication": true,
+        "first_agent_session_preserved": "LOCAL-000002-S1",
+        "work_item_preserved": "WORK-PROJECT-001",
+        "pilot_git_mutation": false
+      }
+    },
+    {
+      "id": "C1-13",
+      "name": "second fresh repository E2E",
+      "status": "IN_PROGRESS",
+      "depends_on": [
+        "C1-12"
+      ],
+      "next_action": "SECOND_FRESH_REPOSITORY_E2E"
+    },
+    {
+      "id": "C1-14",
+      "name": "case closure",
+      "status": "PENDING",
+      "depends_on": [
+        "C1-13"
+      ]
+    }
+  ],
+  "change_protocol": {
+    "clarification": "NO_ROLLBACK",
+    "pre_gate_choice_change": "REENTER_SAME_PHASE",
+    "post_gate_pre_baseline_change": "RETURN_TO_EARLIEST_AFFECTED_PHASE_AND_REVALIDATE_DEPENDENTS",
+    "post_baseline_change": "GOVERNED_UPDATE_PRESERVE_HISTORY",
+    "generic_framework_defect": "FIX_TEMPLATE_TEST_MERGE_UPGRADE_RESUME",
+    "mcp_dependency_defect": "INTAKE_ONLY_NO_MCP_IMPLEMENTATION"
+  }
+}
