@@ -125,7 +125,12 @@
       ".governance/control-plane-db",
       "docs/control-plane/CANONICAL_ARCHITECTURE.md",
       ".governance/control-plane-state/canonical-architecture.json",
-      ".governance/control-plane-db/003_canonical_authorities.sql"
+      ".governance/control-plane-db/003_canonical_authorities.sql",
+      ".github/workflows/mcp-capability-refresh.yml",
+      "scripts/control_plane_mcp_capability_snapshot.py",
+      "scripts/test_control_plane_mcp_capability_snapshot.py",
+      "docs/control-plane/MCP_CAPABILITY_MODEL.md",
+      ".governance/control-plane-state/mcp-capability-snapshot.json"
     ],
     "local_entry_ui": [
       ".github/ISSUE_TEMPLATE/governed-local-entry.yml"
@@ -140,7 +145,7 @@
     "project-specific application code"
   ],
   "initialization_required": true,
-  "template_version": "2.8.8",
+  "template_version": "2.8.14",
   "generic_patterns_imported": [
     "github-first bootstrap",
     "canonical memory pointer",
@@ -263,7 +268,28 @@
     "adaptive questionnaire enriches existing project model and loop engineering rather than creating a parallel engine",
     "signed MCP SSH broker profile recovery",
     "SSH profile material change invalidates discovery approval",
-    "direct MCP evidence preserved across SSH profile mismatch"
+    "direct MCP evidence preserved across SSH profile mismatch",
+    "persistent source-only MCP capability snapshot",
+    "event-and-need based read-only MCP capability refresh",
+    "case-to-tool planning candidates without execution authority",
+    "server connection coordinates excluded from persistent capability snapshot",
+    "MCP capability refresh persisted through governed branch and PR",
+    "authorized issue-comment MCP capability refresh command",
+    "MCP capability refresh restricted to owner member collaborator",
+    "GitHub App snapshot push disables checkout persisted credentials",
+    "compact MCP input-field metadata instead of full schemas",
+    "case capability map references global tool catalogue without duplication",
+    "capability-first MCP planning before tool selection",
+    "observation-first adaptive question resolution",
+    "fresh resolved project facts are not re-asked",
+    "missing MCP capability request prepared only for concrete needed operation",
+    "project registry parser ignores indented path and note metadata",
+    "operational MCP writes use governed operational authority class",
+    "project-specific MCP tools do not satisfy generic project capability",
+    "BOTH transport means dual-ready smart routing rather than coupled execution",
+    "one successful selected MCP route satisfies current discovery",
+    "alternate transport readiness is tracked independently",
+    "legacy authorized direct PASS may migrate without redundant network replay"
   ],
   "automatic_initialization_supported": true
 }
