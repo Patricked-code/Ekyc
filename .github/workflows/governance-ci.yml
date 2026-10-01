@@ -66,6 +66,70 @@ jobs:
       - name: Test Governance Model projection integrity
         run: python3 scripts/test_governance_model_integrity.py
 
+      - name: Test source-only adaptive choice question catalogue
+        run: |
+          if [ -f .template-source ]; then
+            python3 -m py_compile scripts/adaptive_question_planner.py scripts/test_adaptive_question_catalogue.py
+            python3 scripts/test_adaptive_question_catalogue.py
+          else
+            echo "ADAPTIVE_CHOICE_QUESTION_SOURCE_ONLY_SKIP: client repository"
+          fi
+
+      - name: Test source-only control-plane knowledge base
+        run: |
+          if [ -f .template-source ]; then
+            python3 -m py_compile scripts/test_control_plane_knowledge_base.py
+            python3 scripts/test_control_plane_knowledge_base.py
+          else
+            echo "CONTROL_PLANE_KNOWLEDGE_BASE_SOURCE_ONLY_SKIP: client repository"
+          fi
+
+      - name: Test source-only server knowledge model
+        run: |
+          if [ -f .template-source ]; then
+            python3 -m py_compile scripts/test_server_knowledge_model.py
+            python3 scripts/test_server_knowledge_model.py
+          else
+            echo "SERVER_KNOWLEDGE_MODEL_SOURCE_ONLY_SKIP: client repository"
+          fi
+
+      - name: Test source-only identity and secret lifecycle
+        run: |
+          if [ -f .template-source ]; then
+            python3 -m py_compile scripts/test_identity_secret_lifecycle.py
+            python3 scripts/test_identity_secret_lifecycle.py
+          else
+            echo "IDENTITY_SECRET_LIFECYCLE_SOURCE_ONLY_SKIP: client repository"
+          fi
+
+      - name: Test source-only governed execution engine
+        run: |
+          if [ -f .template-source ]; then
+            python3 -m py_compile scripts/governed_execution_engine.py scripts/governed_execution_workflow_bridge.py scripts/test_governed_execution_engine.py scripts/test_governed_execution_workflow.py
+            python3 scripts/test_governed_execution_engine.py
+            python3 scripts/test_governed_execution_workflow.py
+          else
+            echo "GOVERNED_EXECUTION_ENGINE_SOURCE_ONLY_SKIP: client repository"
+          fi
+
+      - name: Test source-only project execution DAG and Loop binding
+        run: |
+          if [ -f .template-source ]; then
+            python3 -m py_compile scripts/governed_project_execution_blueprint.py scripts/governed_loop_execution_adapter.py scripts/test_governed_project_execution_dag.py
+            python3 scripts/test_governed_project_execution_dag.py
+          else
+            echo "PROJECT_EXECUTION_DAG_SOURCE_ONLY_SKIP: client repository"
+          fi
+
+      - name: Test source-only execution package compiler
+        run: |
+          if [ -f .template-source ]; then
+            python3 -m py_compile scripts/governed_execution_package_compiler.py scripts/test_governed_execution_package_compiler.py
+            python3 scripts/test_governed_execution_package_compiler.py
+          else
+            echo "GOVERNED_EXECUTION_PACKAGE_COMPILER_SOURCE_ONLY_SKIP: client repository"
+          fi
+
       - name: Test source-only MCP capability snapshot model
         run: |
           if [ -f .template-source ]; then
@@ -73,6 +137,45 @@ jobs:
             python3 scripts/test_control_plane_mcp_capability_snapshot.py
           else
             echo "MCP_CAPABILITY_SNAPSHOT_SOURCE_ONLY_SKIP: client repository"
+          fi
+
+      - name: Test bounded read-only knowledge collectors
+        run: |
+          if [ -f .template-source ]; then
+            python3 -m py_compile scripts/control_plane_server_inventory_collector.py scripts/test_control_plane_server_inventory_collector.py scripts/control_plane_server_inventory_facts.py scripts/test_control_plane_server_inventory_facts.py scripts/control_plane_github_secret_metadata.py scripts/test_control_plane_github_secret_metadata.py
+            python3 scripts/test_control_plane_server_inventory_collector.py
+            python3 scripts/test_control_plane_server_inventory_facts.py
+            python3 scripts/test_control_plane_github_secret_metadata.py
+          else
+            echo "KNOWLEDGE_COLLECTORS_SOURCE_ONLY_SKIP: client repository"
+          fi
+
+      - name: Test bounded server identity and secret metadata
+        run: |
+          if [ -f .template-source ]; then
+            python3 -m py_compile scripts/control_plane_server_identity_secret_metadata.py scripts/test_control_plane_server_identity_secret_metadata.py scripts/control_plane_server_identity_secret_facts.py scripts/test_control_plane_server_identity_secret_facts.py
+            python3 scripts/test_control_plane_server_identity_secret_metadata.py
+            python3 scripts/test_control_plane_server_identity_secret_facts.py
+          else
+            echo "SERVER_IDENTITY_SECRET_METADATA_SOURCE_ONLY_SKIP: client repository"
+          fi
+
+      - name: Test source-only identity-secret refresh workflow
+        run: |
+          if [ -f .template-source ]; then
+            python3 -m py_compile scripts/test_server_identity_secret_refresh_workflow.py
+            python3 scripts/test_server_identity_secret_refresh_workflow.py
+          else
+            echo "SERVER_IDENTITY_SECRET_REFRESH_SOURCE_ONLY_SKIP: client repository"
+          fi
+
+      - name: Test source-only server recipe capability matrix
+        run: |
+          if [ -f .template-source ]; then
+            python3 -m py_compile scripts/control_plane_server_recipe_capabilities.py scripts/test_control_plane_server_recipe_capabilities.py
+            python3 scripts/test_control_plane_server_recipe_capabilities.py
+          else
+            echo "SERVER_RECIPE_CAPABILITIES_SOURCE_ONLY_SKIP: client repository"
           fi
 
       - name: Materialize canonical control-plane database
