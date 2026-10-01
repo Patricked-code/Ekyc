@@ -1,5 +1,24 @@
 {
   "schema_version": "1.0.0",
-  "revision": 0,
-  "sessions": []
+  "revision": 1,
+  "sessions": [
+    {
+      "session_id": "LOCAL-000001-S1",
+      "agent_identity": "ChatGPT",
+      "provider": "CHATGPT",
+      "provider_conversation_ref": null,
+      "provider_conversation_ref_provenance": "UNAVAILABLE",
+      "connection_ref": "github-issue:1",
+      "repository": "Patricked-code/Ekyc",
+      "starting_head_sha": "4bf80309313f3d34f74ffca183bd540583d2e87f",
+      "last_observed_head_sha": "4bf80309313f3d34f74ffca183bd540583d2e87f",
+      "status": "ACTIVE",
+      "created_at": "2026-10-01T16:59:28+00:00",
+      "last_seen_at": "2026-10-01T16:59:28+00:00",
+      "connection_intent": "WORK_REQUEST",
+      "connection_intent_provenance": "PROVIDED_BY_CLIENT",
+      "entry_action": "CONTINUE_GOVERNED_WORK",
+      "entry_action_provenance": "PROVIDED_BY_CLIENT"
+    }
+  ]
 }

@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "Patricked-code/Ekyc",
+  "request_id": "LOCAL-000001",
+  "session_id": "LOCAL-000001-S1",
+  "baseline_subject_head": "4bf80309313f3d34f74ffca183bd540583d2e87f",
+  "project_profile_status": "SELECTED",
+  "next_action": "EXECUTE_FIRST_PROJECT_WORK_ITEM",
+  "completed_at": "2026-10-01T16:59:28+00:00"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "revision": 2,
+  "revision": 3,
   "items": [
     {
       "work_item_id": "WORK-INIT-001",
@@ -17,7 +17,7 @@
     {
       "work_item_id": "WORK-DISCOVER-001",
       "title": "Discover and capture the project baseline",
-      "status": "READY",
+      "status": "DONE",
       "priority": 900,
       "sequence": 2,
       "dependencies": [
@@ -27,6 +27,20 @@
         "governance-state"
       ],
       "next_action": "DISCOVER_PROJECT_BASELINE"
+    },
+    {
+      "work_item_id": "WORK-PROJECT-001",
+      "title": "Concevoir et documenter l’architecture fonctionnelle et technique complète de la plateforme eKYC avant de coder : parcours KYC de bout en bout, domaines métier, composants, modèle de données, API/webhooks, sécurité et données biométriques, moteur de décision, auditabilité, interfaces front/back-office et dépendances externes, puis produire le backlog d’implémentation chronologique.",
+      "status": "READY",
+      "priority": 800,
+      "sequence": 3,
+      "dependencies": [
+        "WORK-DISCOVER-001"
+      ],
+      "collision_domains": [
+        "project-work"
+      ],
+      "next_action": "EXECUTE_FIRST_PROJECT_WORK_ITEM"
     }
   ]
 }

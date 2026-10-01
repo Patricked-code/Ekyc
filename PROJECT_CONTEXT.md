@@ -1,42 +1,68 @@
 # PROJECT_CONTEXT
 
-- Repository: `Patricked-code/Ekyc`
-- Project: `Ekyc`
-- Project type: `generic`
-- Owner: `@Patricked-code`
-- Canonical branch: `main`
-- Initialized at: `2026-09-27T04:12:08+00:00`
+- Repository: Patricked-code/Ekyc
+- Project: Ekyc
+- Owner: @Patricked-code
+- Canonical branch: main
+- Baseline subject HEAD: 4bf80309313f3d34f74ffca183bd540583d2e87f
+- First governed agent: ChatGPT via CHATGPT
 
 ## Mission
 
-TO_INITIALIZE
+Plateforme KYC/eKYC comparable à Onfido, avec un parcours d’identification et de vérification totalement automatisé de bout en bout.
 
 ## Scope
 
 ### In scope
-- TO_INITIALIZE
+- onboarding KYC/eKYC entièrement automatisé
+- capture et vérification de pièces d’identité
+- OCR et extraction automatique des données
+- contrôle d’authenticité des documents
+- selfie / vidéo / preuve de vie (liveness)
+- comparaison biométrique visage ↔ document
+- détection de fraude et anomalies
+- vérification des données d’identité
+- orchestration automatique des contrôles
+- score de risque / décision automatique
+- API KYC pour intégration avec des applications tierces
+- webhooks et suivi du statut des vérifications
+- portail client / back-office de supervision
+- journalisation, preuves et audit des décisions
+- gestion du consentement et protection des données
+- architecture permettant d’ajouter ensuite AML, PEP, sanctions et autres contrôles réglementaires
 
 ### Out of scope
-- TO_INITIALIZE
+- services bancaires ou de paiement
+- conservation ou gestion de fonds
+- octroi de crédit
+- trading / investissement
+- gestion de comptes bancaires
+- développement des applications métiers des clients qui consommeront l’API
 
 ## Architecture / stack
 
-TO_INITIALIZE
-
-Technical intent is tracked separately in `.governance/project-profile.json`. A planned profile is not evidence of implementation.
+Profile selection: chainsolutions-fullstack-web. See docs/ARCHITECTURE.md.
 
 ## Infrastructure / deployment
 
-See `.governance/infrastructure-intent.json`.
-
-Server, domain, deployment directory, database activation and runtime may legitimately be unknown or not provisioned at repository creation time. Do not invent them.
+Declared baseline status: UNKNOWN_TO_DISCOVER.
 
 ## External systems
 
-TO_INITIALIZE
+- None declared
 
-Preferred governed server access when available: direct MCP. Governed fallback: SSH. Credentials never belong in repository governance.
+## Initial constraints
 
-## Critical constraints
+- Le parcours KYC/eKYC doit être automatisé de bout en bout autant que possible.
+- Les données d’identité et biométriques doivent être protégées, avec gestion du consentement et traçabilité.
+- Chaque décision et contrôle doit être journalisable, explicable et auditable avec ses preuves.
+- La plateforme doit exposer une API et des webhooks pour intégration avec des applications tierces.
+- Les services bancaires, paiements, conservation de fonds, crédit, trading et gestion de comptes bancaires sont hors périmètre.
+- Aucun serveur, domaine, répertoire, base ou fournisseur externe ne doit être considéré comme existant ou choisi tant qu’il n’est pas observé ou explicitement décidé.
 
-See `CONSTRAINTS.md`.
+## Governed repository setup
+
+Workflow model: STANDARD_GOVERNED_FLOW
+MCP linked: True
+Domain binding: {"mode": "UNRESOLVED", "kind": "ROOT_DOMAIN", "reason": "DISCOVER_AVAILABLE_NAMES", "server": "S1"}
+Deployment binding: null

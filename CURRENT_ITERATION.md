@@ -1,18 +1,17 @@
-# CURRENT_ITERATION — LOOP-INIT-001
+# CURRENT_ITERATION — LOOP-PROJECT-001
 
 ## Objective
 
-Initialiser le dépôt gouverné sans introduire de décision métier implicite.
+Concevoir et documenter l’architecture fonctionnelle et technique complète de la plateforme eKYC avant de coder : parcours KYC de bout en bout, domaines métier, composants, modèle de données, API/webhooks, sécurité et données biométriques, moteur de décision, auditabilité, interfaces front/back-office et dépendances externes, puis produire le backlog d’implémentation chronologique.
 
 ## Entry criteria
 
-- dépôt créé depuis le template ;
-- branche canonique disponible.
+- first-agent baseline committed
+- governance validation green
+- online HEAD reobserved before write
 
 ## Exit criteria
 
-- placeholders résolus ;
-- contexte et architecture renseignés ;
-- baseline capturée ;
-- validation gouvernance GREEN ;
-- prochaine action projet définie.
+- project-specific acceptance criteria satisfied
+- regression checks green
+- durable state synchronized

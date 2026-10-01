@@ -1,9 +1,10 @@
 # HANDOFF — Reprise inter-agent
 
-- Repository: `Patricked-code/Ekyc`
-- Branch: `main`
-- Bootstrap input HEAD: `27b584ef38546138b8677690ab9e69e9e1c7c943`
-- Current work item: `WORK-DISCOVER-001`
-- Next action: `DISCOVER_PROJECT_BASELINE`
+- Repository: Patricked-code/Ekyc
+- Branch: main
+- Baseline subject HEAD: 4bf80309313f3d34f74ffca183bd540583d2e87f
+- Active session: LOCAL-000001-S1
+- Current work item: WORK-PROJECT-001
+- Next action: EXECUTE_FIRST_PROJECT_WORK_ITEM
 
-Before any write: reobserve the exact online HEAD. If it moved, reconcile intervening work first.
+Reobserve remote HEAD before any write.

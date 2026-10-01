@@ -1,17 +1,26 @@
 {
   "schema_version": "1.0.0",
   "repository": "Patricked-code/Ekyc",
-  "linked": false,
-  "status": "UNCONFIGURED",
-  "transport": null,
-  "endpoint": null,
-  "ssh_connection_profile": null,
+  "linked": true,
+  "status": "DISCOVERED_READONLY",
+  "transport": "BOTH",
+  "endpoint": "https://mcp.wealthtechinnovations.com/mcp",
+  "ssh_connection_profile": {
+    "host": "212.227.212.33",
+    "port": 22,
+    "user": "root"
+  },
   "credential_names": [],
-  "discovery_status": "NOT_RUN",
-  "discovery_observed_at": null,
-  "domain_strategy": null,
-  "domain_binding": null,
+  "discovery_status": "PASS",
+  "discovery_observed_at": "2026-09-29T23:28:25+00:00",
+  "domain_strategy": "DISCOVER_EXISTING_THEN_PROPOSE",
+  "domain_binding": {
+    "mode": "UNRESOLVED",
+    "kind": "ROOT_DOMAIN",
+    "reason": "DISCOVER_AVAILABLE_NAMES",
+    "server": "S1"
+  },
   "deployment_binding": null,
-  "project_registration_status": "UNKNOWN",
+  "project_registration_status": "UNVERIFIED",
   "write_tools_status": "DISABLED_UNTIL_REGISTERED_AND_AUTHORIZED"
 }

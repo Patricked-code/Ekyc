@@ -1,14 +1,10 @@
-# LOOP_STATE — État de la boucle
-
-```json
 {
-  "loop_id": "LOOP-INIT-001",
+  "loop_id": "LOOP-PROJECT-001",
   "state": "IN_PROGRESS",
-  "phase": "DISCOVER",
+  "phase": "PLAN",
   "repository": "Patricked-code/Ekyc",
   "canonical_branch": "main",
-  "baseline_head": "TO_CAPTURE",
-  "next_action": "DISCOVER_PROJECT_BASELINE",
-  "last_verification": "GOVERNANCE_BOOTSTRAP_ATTESTED"
+  "baseline_head": "4bf80309313f3d34f74ffca183bd540583d2e87f",
+  "next_action": "EXECUTE_FIRST_PROJECT_WORK_ITEM",
+  "last_verification": "FIRST_AGENT_BASELINE_APPROVED"
 }
-```

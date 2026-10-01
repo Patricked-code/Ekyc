@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "repository": "Patricked-code/Ekyc",
-  "selected_model": null,
+  "selected_model": "STANDARD_GOVERNED_FLOW",
   "supported_models": {
     "REGULATORY_AFRICAFUNDS_GOVERNED_FLOW": [
       "READ_AUTHORITIES",

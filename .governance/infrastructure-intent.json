@@ -26,7 +26,7 @@
   "server_access": {
     "preferred": "DIRECT_MCP",
     "fallback": "SSH",
-    "status": "UNRESOLVED",
+    "status": "DISCOVERED_READONLY",
     "credentials_in_repository": "FORBIDDEN"
   },
   "lifecycle": [
@@ -46,5 +46,6 @@
     "NO_SECRET_IN_REPOSITORY",
     "MCP_DIRECT_PREFERRED_SSH_FALLBACK",
     "PROVISIONING_REQUIRES_AUTHORITY"
-  ]
+  ],
+  "baseline_declaration": "UNKNOWN_TO_DISCOVER"
 }

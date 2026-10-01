@@ -1,32 +1,25 @@
 # ARCHITECTURE
 
+## Baseline
+
+- Subject HEAD: 4bf80309313f3d34f74ffca183bd540583d2e87f
+- Status: NEW_EMPTY_PROJECT
+- Project profile: chainsolutions-fullstack-web
+
 ## Current architecture
 
-TO_INITIALIZE
+Projet neuf vide : aucun code métier ni architecture applicative n’est encore implémenté. Le profil chainsolutions-fullstack-web est sélectionné ; ses intentions planifiées incluent un frontend Next.js/TypeScript, un backend Node.js à préciser et PostgreSQL, mais ces éléments restent PLANNED et ne doivent pas être traités comme implémentés ou déployés.
 
-## Required sections
+## Required future detail
 
-- system context;
-- components/modules;
-- data stores;
-- external integrations;
-- trust boundaries;
-- deployment topology;
-- observability;
-- rollback / recovery;
-- architectural constraints.
+- system context
+- components/modules
+- data stores
+- external integrations
+- trust boundaries
+- deployment topology
+- observability
+- rollback/recovery
+- architectural constraints
 
-Architecture changes that invalidate a previous decision require an ADR.
-
-
-## Technical intent versus observed architecture
-
-Before architecture is discovered, `.governance/project-profile.json` may contain a planned candidate such as `chainsolutions-fullstack-web` (Node.js, Next.js + TypeScript, PostgreSQL).
-
-A candidate is not the current architecture. Discovery must decide whether to select, adapt or reject it.
-
-## Deployment topology discovery
-
-Use `.governance/infrastructure-intent.json` to represent the deployment lifecycle, including an unknown server, missing directory or unprovisioned database.
-
-No server, domain, directory or deployment state becomes factual without observation or an explicit provisioning result.
+No planned profile is evidence of implementation. Architecture changes that invalidate a durable decision require an ADR.

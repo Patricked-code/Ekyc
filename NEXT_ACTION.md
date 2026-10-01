@@ -1,21 +1,10 @@
 # NEXT_ACTION — Point de reprise unique
 
-```text
-NEXT_ACTION = DISCOVER_PROJECT_BASELINE
+NEXT_ACTION = EXECUTE_FIRST_PROJECT_WORK_ITEM
 STATE = READY
-```
 
-## Action
+## Work item
 
-Lire les autorités du dépôt, observer le HEAD exact, inventorier l'existant, résoudre ou différer explicitement le profil technique, découvrir l'état de l'infrastructure sans rien inventer, puis capturer une baseline avant tout travail fonctionnel.
+WORK-PROJECT-001 — Concevoir et documenter l’architecture fonctionnelle et technique complète de la plateforme eKYC avant de coder : parcours KYC de bout en bout, domaines métier, composants, modèle de données, API/webhooks, sécurité et données biométriques, moteur de décision, auditabilité, interfaces front/back-office et dépendances externes, puis produire le backlog d’implémentation chronologique.
 
-## Done when
-
-- profil projet sélectionné ou explicitement laissé en découverte ;
-- serveur, domaine, répertoire et base observés ou explicitement laissés non résolus ;
-- voie d'accès serveur classée DIRECT_MCP, SSH fallback ou indisponible ;
-- contexte projet complété ;
-- architecture initiale décrite ;
-- baseline HEAD/CI enregistrée ;
-- risques et dépendances initiaux enregistrés ;
-- première action fonctionnelle unique définie.
+Before write: reobserve online HEAD and reconcile if moved.

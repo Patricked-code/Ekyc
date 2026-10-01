@@ -1,15 +1,12 @@
 # STATUS — État courant
 
-> State: `GOVERNANCE_INITIALIZED_BASELINE_REQUIRED`
+> State: PROJECT_BASELINE_READY
 
-- Repository: `Patricked-code/Ekyc`
-- Branch: `main`
-- Bootstrap input HEAD: `27b584ef38546138b8677690ab9e69e9e1c7c943`
-- Attested initialization commit: `4e4619465afb454bbd901d3d390e534f36839417`
-- Governance validation: `PASS`
-- Governance freshness: `ATTESTED`
-- Next action: `DISCOVER_PROJECT_BASELINE`
+- Repository: Patricked-code/Ekyc
+- Branch: main
+- Baseline subject HEAD: 4bf80309313f3d34f74ffca183bd540583d2e87f
+- First governed session: LOCAL-000001-S1
+- Governance validation: PASS_PENDING_COMMIT
+- Next action: EXECUTE_FIRST_PROJECT_WORK_ITEM
 
-The attestation commit is the Git child commit containing this state; its remote presence is verified by the bootstrap workflow.
-
-No production, deployment, compliance, legal, financial or operational status is implied.
+First project objective: Concevoir et documenter l’architecture fonctionnelle et technique complète de la plateforme eKYC avant de coder : parcours KYC de bout en bout, domaines métier, composants, modèle de données, API/webhooks, sécurité et données biométriques, moteur de décision, auditabilité, interfaces front/back-office et dépendances externes, puis produire le backlog d’implémentation chronologique.

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "repository": "Patricked-code/Ekyc",
-  "selection_status": "DISCOVERY_REQUIRED",
-  "selected_profile": null,
+  "selection_status": "SELECTED",
+  "selected_profile": "chainsolutions-fullstack-web",
   "organization_default_candidate": "chainsolutions-fullstack-web",
   "profiles": {
     "generic": {
