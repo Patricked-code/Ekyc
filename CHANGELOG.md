@@ -449,3 +449,9 @@ Adds `CPD-024` and canonical architecture revision `CP-ARCH-001-R5` for the port
 - Governed client upgrade synchronized from the current Template manifest version.
 - Preserves client business state while refreshing the generic governance/runtime/test surface.
 - Client CI remains portable and source-only control-plane memory stays excluded.
+
+## Governance Automation V2.8.27
+
+- Governed client upgrade synchronized from the current Template manifest version.
+- Preserves client business state while refreshing the generic governance/runtime/test surface.
+- Client CI remains portable and source-only control-plane memory stays excluded.
